@@ -1,0 +1,10 @@
+<p>
+  socket works!
+</p>
+
+
+<form [formGroup]="formGroup" novalidate (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="nom">
+  <input type="file" (change)="onFileChange($event)" />
+  <button type="submit" [disabled]="formGroup.invalid || formGroup.prestine">Submit</button>
+</form>
